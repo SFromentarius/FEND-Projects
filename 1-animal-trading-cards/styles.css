@@ -1,0 +1,89 @@
+:root {
+    /* Brutalism colors in variables */
+    --blue: #0000ff;
+    --yellow: #ffff00;
+    --pink: #ff00ff;
+    --purple: #6600ff;
+}
+
+.card3d {
+    width: 300px;
+}
+
+/* CARD FRONT
+*****************************************/
+
+.card-front {
+    border: 2px solid var(--yellow);
+    box-shadow: 5px 10px black;
+    width: 300px;
+    padding: 10px;
+    background: linear-gradient(to right, var(--blue), var(--pink));
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    /* FLIP CARD EFFECT */
+    position: absolute;
+    transform: perspective(500px) rotateY(0deg);
+    backface-visibility: hidden;
+    transition: transform 0.5s linear;
+}
+
+.card-front:hover {
+    transform: perspective(500px) rotateY(-180deg);
+}
+
+/* CARD TITLE */
+
+.card-front__title {
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+/* CARD PICTURE */
+
+.card-front__picture {
+    width: 300px;
+    text-align: center;
+}
+
+/* CARD CONTENT */
+
+.card-front__content {
+    border: 1px dotted gray;
+    width: 300px;
+}
+
+.card-front__content__funfact {
+    font-style: italic;
+}
+
+.card-front__content__list span {
+    font-weight: bold;
+}
+
+.card-front__content__list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.card-front__content__description {
+    text-align: justify;
+}
+
+/* CARD BACK
+*****************************************/
+
+.card-back {
+    width: 300px;
+    background: black;
+    /* FLIP CARD EFFECT */
+    position: absolute;
+    transform: perspective(500px) rotateY(180deg);
+    backface-visibility: hidden;
+    transition: transform 0.5s linear;
+}
+
+.card-back:hover {
+    transform: perspective(500px) rotateY(0deg);
+}
