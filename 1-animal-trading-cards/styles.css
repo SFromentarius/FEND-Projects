@@ -8,6 +8,7 @@
 
 .card3d {
     width: 300px;
+    height: 611.133px;
 }
 
 /* CARD FRONT
@@ -15,7 +16,7 @@
 
 .card-front {
     border: 2px solid var(--yellow);
-    box-shadow: 5px 10px black;
+    /*box-shadow: 5px 10px black;*/
     width: 300px;
     padding: 10px;
     background: linear-gradient(to right, var(--blue), var(--pink));
@@ -29,7 +30,7 @@
     transition: transform 0.5s linear;
 }
 
-.card-front:hover {
+.card3d:hover > .card-front {
     transform: perspective(500px) rotateY(-180deg);
 }
 
@@ -76,14 +77,23 @@
 
 .card-back {
     width: 300px;
-    background: black;
+    height: 611.133px;
+    background: var(--yellow);
     /* FLIP CARD EFFECT */
     position: absolute;
     transform: perspective(500px) rotateY(180deg);
     backface-visibility: hidden;
     transition: transform 0.5s linear;
+    text-align: center;
+    font-weight: 700;
+    font-size: 90px;
 }
 
-.card-back:hover {
+.card-back p {
+    margin-top: 0;
+    padding-top:35px;
+}
+
+.card3d:hover > .card-back {
     transform: perspective(500px) rotateY(0deg);
 }
