@@ -1,4 +1,5 @@
 The Memory Game Project is the third project from the FEND of Udacity.
+You can find the finished project here: https://codepen.io/SarahF3000/pen/OvYQBv
 
 # Memory Game Project
 
