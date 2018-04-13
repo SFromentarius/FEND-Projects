@@ -1,20 +1,12 @@
+The Memory Game Project is the third project from the FEND of Udacity.
+
 # Memory Game Project
 
-## Table of Contents
-
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+To start, click on a card. Then, you must find the pair of this card: the one that has the same sign.
+To finish the game, you must find the 8 pairs of similar cards.
+A timer is triggered at the beginning of the game, and your game is rated according to a star system.
+You can also start the game from the beginning by clicking on the "restart" button.
 
 ## Instructions
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
-
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
-
-## Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
-
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+The starter project had some HTML and CSS styling to display a static version of the Memory Game project. We needed to convert this project from a static project to an interactive one. This required modifying the HTML and CSS files, but primarily the JavaScript file.
