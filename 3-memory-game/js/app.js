@@ -57,6 +57,20 @@ restart.addEventListener('click', function () {
 
 //When the user clicks on a card
 deck.addEventListener('click', function (e) {
+    //to exclude all case where e.target is not one <li> element
+    if (e.target.nodeName !== "LI") {
+        return;
+    }
+    ////disable the click listener 
+    //if the card has been clicked once
+    if (e.target.classList.contains('open')) {
+        return;
+    }
+    //if 2 cards are flipped
+    if(cardList.length == 2){
+        return;
+    }
+    //else
     showSymbol(e); //the card is flipped
     cardHolder(e); //the first and second card are "saved" in cardList, to check if:
     if (cardList.length > 1) {
@@ -77,8 +91,6 @@ deck.addEventListener('click', function (e) {
     }
 
     increaseMove();
-
-
 });
 
 //When a card is clicked-> opened and shown
@@ -122,15 +134,11 @@ function increaseMove() {
 
     document.querySelector('.moves').innerHTML = moves;
     // Stars disappear if too much moves
-    if (moves == 14) {
+    if (moves == 20) {
         stars.firstElementChild.remove();
     }
-    if (moves == 25) {
+    if (moves == 35) {
         stars.firstElementChild.remove();
-    }
-    if (moves == 40) {
-        stars.firstElementChild.remove();
-        stars.innerHTML = '';
     }
 
 }
@@ -176,11 +184,7 @@ let timePassed = document.querySelector('.time-passed');
 function openModal() {
     stopTimer();
     modal.style.display = 'block';
-    if (stars.innerHTML == '') {
-        starsRate.innerHTML = '0 star';
-    } else {
-        starsRate.innerHTML = stars.innerHTML;
-    }
+    starsRate.innerHTML = stars.innerHTML;
     document.querySelector('.moves-total').innerHTML = moves;
     timePassed.innerHTML = timer.innerHTML;
 }
