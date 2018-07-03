@@ -1,0 +1,17 @@
+.cat-container{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    width: 20%;
+    
+}
+
+.cat-picture{
+    border: 3px solid gray;
+    box-shadow: 2px 3px 4px black;
+}
+
+#adminForm{
+    display: none;
+}
